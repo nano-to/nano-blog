@@ -8,6 +8,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="stylesheet" href="../css/highlight.min.css">
+        <% if (article.video) { %>
+        <link rel="stylesheet" href="../css/plyr.css">
+        <% } %>
         <style>
             :root { --color: <%- color || '#3498db' %>; }
         </style>
@@ -60,11 +63,13 @@
                 %>
                 <% if (!article.video) { %>
                 <img class="hero-img" src="<%- image %>" alt="">
+                <% } else { %>
+                <div style="height: 10px;"></div>
                 <% } %>
                 <% } %>
                 <%- article.html %>
                 <% if (!article.single && articles.length > 1) { %> 
-                <div style="margin-top: 40px;">
+                <div style="margin-top: 20px;">
                     <h2>More Articles</h2>
                     <ul>
                         <% articles.filter(a => !a.hidden && a.tags === article.tags).slice(0, 10).map(article => { %>
@@ -132,6 +137,10 @@
         }
         </script>
         <script src="../js/highlight.min.js"></script>
+        <% if (article.video) { %>
+        <script src="../js/plyr.js"></script>
+        <% if (!article.price) { %><script>window.video = new Plyr('#video')</script><% } %>
+        <% } %>
         <% if (article.goal) { %>
         <script src="https://goal.nano.to/latest.js"></script>
         <script>
@@ -157,6 +166,7 @@
                     if (document.getElementById('preview')) document.getElementById('preview').style.display = 'none'
                     if (block) window.event({ event: `<%- article.button || 'Unlock Article' %>`, revenue: '<%- article.price || article.cost %>' })
                     setTimeout(() => {
+                        window.video = new Plyr('#video')
                         window.hljs.highlightAll();
                         createQuickLinks()
                     }, 100)

@@ -257,7 +257,7 @@ dd {
   margin-top: 0;
 }
 
-button {
+/*button {
   display: block;
   margin: 1.75rem auto;
   padding: 1em 2.5em;
@@ -270,7 +270,8 @@ button {
   background: white;
   color: #666;
   transition: background 0.1s, color 0.1s;
-}
+}*/
+
 button:hover {
   background: #666;
   color: white;
