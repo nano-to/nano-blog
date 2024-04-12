@@ -11,7 +11,7 @@
         <style>
             :root { --color: <%- color || '#3498db' %>; }
         </style>
-        <link rel="stylesheet" href="../css/blog.css?v=11">
+        <link rel="stylesheet" href="../css/blog.css?v=12">
         <meta property="og:title" content="<%- article.title %>" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://<%- domain %>" />
@@ -58,7 +58,9 @@
                     var image = article.image
                     if (image && !image.includes('//')) image = '../../' + image
                 %>
+                <% if (!article.video) { %>
                 <img class="hero-img" src="<%- image %>" alt="">
+                <% } %>
                 <% } %>
                 <%- article.html %>
                 <% if (!article.single && articles.length > 1) { %> 

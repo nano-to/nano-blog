@@ -4,6 +4,7 @@
 - image: images/setup-node/hero.jpeg
 - author: @nano2bot
 - price: 0.0133
+- video: true
 -----
 
 <video width="auto" controls>
