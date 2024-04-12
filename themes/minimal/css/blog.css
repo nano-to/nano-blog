@@ -634,6 +634,10 @@ li code {
   background: #1f1f1f;
 }
 
+video {
+  width: 100%;
+}
+
 @media (max-width: 1280px) {
   #nav {
     max-width: 215px;

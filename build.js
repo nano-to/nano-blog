@@ -5,7 +5,7 @@ const path = require("path")
 const ejs = require('ejs')
 const moment = require('moment')
 const Markdown = require('markdown-it'), 
-	  md = new Markdown().use(require('markdown-it-named-headings'))
+	  md = new Markdown({ html: true, linkify: true }).use(require('markdown-it-named-headings'))
 
 moment.suppressDeprecationWarnings = true;
 
@@ -74,7 +74,7 @@ fs.readdirSync(source).forEach(file => {
 	article.html = md.render(body)
 	if (article.price) article.html = 'PREMIUM-ARTICLE-A' + Buffer.from(article.html).toString('base64') + '+HRT'
 	article.url = `https://${clean}${blog_path ? '/' + blog_path : '' }/${slug}.html` // who needs fancy req objects.
-	article.preview = article.preview || article.snippet || body.split('\n')[0]
+	article.preview = article.preview || article.snippet
 	if (article.goal) article.html = article.html
 		.split('[funding]')
 		.join(`<div class="goal" data-title="${article.goal.split('|')[1]}" data-address="${article.address ? article.address : nano_address}" data-amount="${article.goal.split('|')[0]}"></div>`)
@@ -104,7 +104,8 @@ copyFolderSync(`./themes/${theme}/css`, `${dest}/css`)
 copyFolderSync(`./themes/${theme}/img`, `${dest}/img`)
 copyFolderSync(`./themes/${theme}/js`, `${dest}/js`)
 copyFolderSync(`./images`, `${dest}/images`)
-copyFolderSync(`./img`, `${dest}/img`)
+copyFolderSync(`./videos`, `${dest}/videos`)
+// copyFolderSync(`./img`, `${dest}/img`)
 
 // homepage
 var index_html = fs.readFileSync(`./themes/${theme}/index.html`, { encoding: "utf8" })

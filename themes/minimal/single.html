@@ -137,14 +137,14 @@
         </script>
         <% } %>
         <% if ((article.price || article.cost) && nano_address) { %>
-        <script src="../../js/latest.js"></script>
-        <!-- <script src="https://pay.nano.to/latest.js"></script> -->
+        <script src="https://pay.nano.to/latest.js"></script>
         <script>
             NanoPay.wall({ 
                 button: `<%- article.button || 'Unlock Article' %>`,
                 description: `<%- article.label || '' %>`,
                 <% if (article.free) { %> free: false, <% } %>
                 decode: true,
+                unique: true,
                 amount: '<%- article.price || article.cost %>', // Cost of article
                 element: '.premium',
                 address: '<%- nano_address %>',
