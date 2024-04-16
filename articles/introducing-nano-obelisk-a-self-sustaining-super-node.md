@@ -19,9 +19,9 @@ A proper article is coming. For now here are some basics:
 - Geothermal Cooling
 - Representative Nano Node
 - Will be accessible via RPC.Nano.To
-- First one will be built in the dessert
-- I will live on-site for first few months while building
-- It will be built with as much reproducible parts as posible.
+- I will live on-site for first few weeks while building it
+- I will live-stream + record most of it.
+- It will be built with reproducible parts.
 - How to build it will be Open Source
 - Donors can be Co-Owners and share profits.
 
