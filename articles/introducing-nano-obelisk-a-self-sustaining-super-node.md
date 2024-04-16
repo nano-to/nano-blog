@@ -9,7 +9,21 @@
 
 [funding]
 
-Full Story: Coming Soon.
+A proper article is coming. For now here are some basics:
+
+- Giant metal tower with the Nano logo on top
+- Visible from quite far. 
+- A monument, if you will.
+- Starlink antenna (+ Fiber where possible)
+- Solar Array for Power
+- Geothermal Cooling
+- Representative Nano Node
+- Will be accessible via RPC.Nano.To
+- First one will be built in the dessert
+- I will live on-site for first few months while building
+- It will be built with as much reproducible parts as posible.
+- How to build it will be Open Source
+- Donors can be Co-Owners and share profits.
 
 ### Funding Levels:
 
