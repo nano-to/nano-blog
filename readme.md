@@ -25,44 +25,44 @@ Your Repo can be private, and named anything you like.
 ## Step 2. Setup Cloudflare Pages
 
 **Sign Up for [Cloudflare](https://dash.cloudflare.com/sign-up)**
-![line](https://github.com/fwd/nano-blog/raw/master/guide/0.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/0.png)
 
 **Go to Workers & Pages**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/1-new.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/1-new.png)
 
 **Create New Application**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/2-new.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/2-new.png)
 
 **Go to Pages**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/3.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/3.png)
 
 **Connect to Git**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/4.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/4.png)
 
 **Add Github Account**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/5-new.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/5-new.png)
 
 **Select Nano/Blog fork**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/6.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/6.png)
 
 **Select Repo and Begin Setup**
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/7.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/7.png)
 
 **Configure Blog**
 - **Build command:** node build
 - **Build output:** docs
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/8.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/8.png)
 
 **Optional: Setup Custom Domain**
-![line](https://github.com/fwd/nano-blog/raw/master/guide/9.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/9.png)
 
 # Step 3. Edit Your Blog
 
@@ -98,7 +98,7 @@ npm install
 npm run watch
 ```
 
-![line](https://github.com/fwd/nano-blog/raw/master/guide/watch.png)
+![line](https://github.com/fwd/nano-blog/raw/master/.github/guide/watch.png)
 
 Local Version: http://localhost:8080
 

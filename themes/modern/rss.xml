@@ -1,0 +1,17 @@
+<rss version="2.0">
+    <channel>
+        <title><%- title %></title> 
+        <link>https://<%- domain %></link>
+        <% if (description) { %>
+        <description><%- description %></description>
+        <% } %>
+        <language><%- language %></language>
+        <% articles.map((article) => { %>
+            <item>
+                <title><%- article.title %></title>
+                <link><%- article.url %></link>
+                <pubDate><%- article.date %></pubDate>
+            </item>
+        <% }) %>
+    </channel>
+</rss>

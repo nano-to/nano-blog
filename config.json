@@ -1,17 +1,88 @@
 {
-	"site_title": "Blog - Nano.to",
-	"title": "Nano.to Blog",
-	"domain": "blog.nano.to",
-	"theme": "minimal",
+	"site_title": "Docs - Nano.to",
+	"title": "Nano.to Documentation",
+	"domain": "docs.nano.to",
+	"theme": "modern",
 	"source": "./articles",
 	"dest": "./docs",
-	"path": "",
+	"path": "guides",
+	"sitemap_tags": false,
 	"twitter": "@nano2dev",
 	"color": "#3498db",
 	"footer": "<a href='../'>Nano.to Blog</a>",
 	"website": "nano.to",
 	"contact": "support@nano.to",
-	"navigation": ["Crypto","Software","Hardware","Education"],
+	"navigation": [
+		{ "title": "Learn" },
+		{ 
+			"title": "Developers",
+			"submenu": [
+				
+				{
+					"title": "Start Building",
+					"menu": [
+						{ "title": "NanoPay.js", "href": "/nanopay", "description": "Add nano to any website." }
+					]
+				},
+
+				{
+					"title": "Services",
+					"menu": [
+						{ "title": "@nano/wallet", "href": "/wallet" }
+					]
+				}
+
+			]
+		},
+		{ 
+			"title": "Solutions",
+			"submenu": [
+				
+				{
+					"title": "Tools",
+					"menu": [
+						{ "title": "NanoPay.js", "href": "/nanopay", "description": "Add nano to any website." }
+					]
+				},
+
+				{
+					"title": "Use Cases",
+					"menu": [
+						{ "title": "Business", "href": "#" },
+						{ "title": "Enterprise", "href": "#" },
+						{ "title": "Gaming & Entertaiment", "href": "#" },
+						{ "title": "Payment & Commerce", "href": "#" }
+					]
+				}
+
+			]
+		},
+		{ 
+			"title": "Network",
+			"submenu": [
+				
+				{
+					"title": "Network",
+					"menu": [
+						{ "title": "Blockchain Explorers", "href": "#", "description": "Browse the live network" },
+						{ "title": "Run Nano Node", "href": "#", "description": "Help run the Nano network" },
+						{ "title": "Network Status", "href": "#", "description": "Performance and status" }
+					]
+				},
+
+				{
+					"title": "Inspect",
+					"menu": [
+						{ "title": "Nanobrowse.com", "href": "#", "description": "Browse the live network" },
+						{ "title": "Nanolooker.com", "href": "#", "description": "Browse the live network" },
+						{ "title": "Nanocrawler.com", "href": "#", "description": "Browse the live network" }
+					]
+				}
+
+			]
+		},
+		{ "title": "Community" }
+	],
 	"metrics": true,
 	"json_api": true,
 	"rss_api": true,

@@ -20,6 +20,7 @@ const domain = config.domain
 const description = config.description
 const site_title = config.site_title
 const nano_address = config.nano_address
+const sitemap_tags = config.sitemap_tags
 const color = config.color
 const json_api = config.json_api
 const rss_api = config.rss_api
@@ -73,6 +74,7 @@ fs.readdirSync(source).forEach(file => {
 	article.fromNow = date.format('MMM DD, YYYY')
 	article.html = md.render(body)
 	if (article.price) article.html = 'PREMIUM-ARTICLE-A' + Buffer.from(article.html).toString('base64') + '+HRT'
+	article.permalink = `/${blog_path ? blog_path : '' }/${slug}.html` // who needs fancy req objects.
 	article.url = `https://${clean}${blog_path ? '/' + blog_path : '' }/${slug}.html` // who needs fancy req objects.
 	article.preview = article.preview || article.snippet
 	if (article.goal) article.html = article.html
@@ -128,69 +130,73 @@ if (rss_api) {
 }
 
 // dedicated category apges
-var tags = []
-
-articles.filter(a => !a.hidden).filter(a => a.tags).map(a => a.tags.split(',').map(b => tags.push(b.trim())))
-
-for (var tag of _.uniq(tags)) {
-
-	// tag = tag ?  tag.toLowerCase() : false
-
-	if (!tag) continue
-
-	if (!fs.existsSync(`${dest}/tag`)) fs.mkdirSync(`${dest}/tag`)
-	if (!fs.existsSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}`)) fs.mkdirSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}`)
+if (sitemap_tags !== false) {
 	
-	var tag_articles = articles.filter(a => !a.hidden && a.tags.includes(tag))
+	var tags = []
 
-	fs.writeFileSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}/index.html`, ejs.render(index_html, { 
-		footer, 
-		nav,
-		color,
-		articles: tag_articles, 
-		cover, 
-		favicon, 
-		title: 'Tag: ' + tag, 
-		site_title: tag + ' - ' + title, 
-		metrics, 
-		website, 
-		twitter, 
-		iconSize, 
-		github: tag, 
-		verified: tag_articles.find(a => a.verified) }), 
-	{ encoding: "utf8" } )
-	
-	var single_html = fs.readFileSync(`./themes/${theme}/single.html`, { encoding: "utf8" })
+	articles.filter(a => !a.hidden).filter(a => a.tags).map(a => a.tags.split(',').map(b => tags.push(b.trim())))
 
-	tags = []
+	for (var tag of _.uniq(tags)) {
 
-	for (var article of tag_articles) {
+		// tag = tag ?  tag.toLowerCase() : false
 
-		var article_html = ejs.render(single_html, { 
+		if (!tag) continue
+
+		if (!fs.existsSync(`${dest}/tag`)) fs.mkdirSync(`${dest}/tag`)
+		if (!fs.existsSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}`)) fs.mkdirSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}`)
+		
+		var tag_articles = articles.filter(a => !a.hidden && a.tags.includes(tag))
+
+		fs.writeFileSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}/index.html`, ejs.render(index_html, { 
 			footer, 
 			nav,
 			color,
-			articles : tag_articles.filter(a => a.slug !== article.slug), 
-			article, 
-			site_title, 
-			title, 
+			articles: tag_articles, 
 			cover, 
 			favicon, 
-			nano_address: article.address || nano_address, 
-			domain, 
+			title: 'Tag: ' + tag, 
+			site_title: tag + ' - ' + title, 
 			metrics, 
-			verified, 
-			twitter,
-			github,
 			website, 
-			iconSize
-		})
-
-		fs.writeFileSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}/${article.slug}.html`, article_html, { encoding: "utf8" } )
-
-		article.articles = tag_articles.filter(a => a.slug !== article.slug)
+			twitter, 
+			iconSize, 
+			github: tag, 
+			verified: tag_articles.find(a => a.verified) }), 
+		{ encoding: "utf8" } )
 		
-		tags.push(article)
+		var single_html = fs.readFileSync(`./themes/${theme}/single.html`, { encoding: "utf8" })
+
+		tags = []
+
+		for (var article of tag_articles) {
+
+			var article_html = ejs.render(single_html, { 
+				footer, 
+				nav,
+				color,
+				articles : tag_articles.filter(a => a.slug !== article.slug), 
+				article, 
+				site_title, 
+				title, 
+				cover, 
+				favicon, 
+				nano_address: article.address || nano_address, 
+				domain, 
+				metrics, 
+				verified, 
+				twitter,
+				github,
+				website, 
+				iconSize
+			})
+
+			fs.writeFileSync(`${dest}/tag/${tag.split(' ').join('-').toLowerCase()}/${article.slug}.html`, article_html, { encoding: "utf8" } )
+
+			article.articles = tag_articles.filter(a => a.slug !== article.slug)
+			
+			tags.push(article)
+
+		}
 
 	}
 
@@ -202,16 +208,22 @@ try {
 	var parsed = domain.replace('https://', '').split('/').join('').replace('http://', '')
 	var pages = [ { url: 'https://' + parsed + '/', timestamp: moment().format('YYYY-MM-DD') } ]
 	articles.filter(a => !a.hidden).map(a => pages.push({ url: 'https://' + parsed + `${blog_path ? '/' + blog_path : '' }` + '/' + a.slug, timestamp: moment(a.date).format('YYYY-MM-DD') }))
-	var authors = articles.filter(a => a.author && !a.hidden).map(a => a.author)
-	authors.filter(a => !a.hidden).map(a => {
-		if (!pages.find(b => b.url === 'https://' + parsed + '/' + a)) pages.push({ url: 'https://' + parsed + '/' + a, timestamp: moment(a.date).format('YYYY-MM-DD') })
-	})
-	var tags = []
-	articles.filter(a => !a.hidden).filter(a => a.tags).map(a => a.tags.split(', ').map(b => tags.push({ name: b, articles: articles.filter(c => c.tags.includes(b)) })))
-	tags.map(_tag => {
-		var url = 'https://' + parsed + `${blog_path ? '/' + blog_path : '' }` + '/tag/' + _tag.name.toLowerCase().split(' ').join('-')
-		if (!pages.find(a => a.url === url)) pages.push({ url, timestamp: moment(_tag.articles[0] ? _tag.articles[0].date : '').format('YYYY-MM-DD') })
-	})
+	if (sitemap_tags !== false) {
+		
+		var authors = articles.filter(a => a.author && !a.hidden).map(a => a.author)
+		authors.filter(a => !a.hidden).map(a => {
+			if (!pages.find(b => b.url === 'https://' + parsed + '/' + a)) pages.push({ url: 'https://' + parsed + '/' + a, timestamp: moment(a.date).format('YYYY-MM-DD') })
+		})
+
+		var tags = []
+		
+		articles.filter(a => !a.hidden).filter(a => a.tags).map(a => a.tags.split(', ').map(b => tags.push({ name: b, articles: articles.filter(c => c.tags.includes(b)) })))
+		
+		tags.map(_tag => {
+			var url = 'https://' + parsed + `${blog_path ? '/' + blog_path : '' }` + '/tag/' + _tag.name.toLowerCase().split(' ').join('-')
+			if (!pages.find(a => a.url === url)) pages.push({ url, timestamp: moment(_tag.articles[0] ? _tag.articles[0].date : '').format('YYYY-MM-DD') })
+		})
+	}
 	fs.writeFileSync(`${dest}/sitemap.xml`, ejs.render(sitemap, { pages }), { encoding: "utf8" } )
 } catch(err) {
 	console.error(err)
