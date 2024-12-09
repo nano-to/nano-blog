@@ -3,6 +3,7 @@
 - tags: Press Release
 - image: images/nano-cloud/hero.png
 - author: @nano2dev
+- hidden: true
 -----
 
 The Nano ecosystem is founded on the principles of decentralization, speed, and cost-efficiency. A fundamental pillar of this ecosystem is **non-custodial security**, empowering individuals to maintain full control over their funds. 
@@ -23,21 +24,10 @@ While seasoned developers and exchanges might have resources to overcome these c
 
 ## Our Solution: Secure, Accessible, and Scalable
 
-At RPC.Nano.To, we’re committed to creating tools that help developers and exchanges interact with the Nano blockchain efficiently, securely, and without unnecessary barriers.
-
-### 1. **A Public Nano Node for All**
-Our platform offers a globally hosted, **public Nano node**, enabling developers to integrate Nano into their applications without needing to manage their own node. This is ideal for:
-
-- New developers experimenting with Nano for the first time.
-- Established businesses that need reliable access to the Nano network without dedicating resources to node maintenance.
-
-By removing the operational burden of running a node, we allow developers to focus on building innovative solutions.
-
-### 2. **Cloud-Based Non-Custodial Platform**
 We recognize the tension between security and usability in non-custodial solutions. That’s why we’re building **Cloud.Nano.To**, a **non-custodial Nano-as-a-Service platform**. Here’s how it works:
 
-- **Encrypted Key Storage**: Private keys are encrypted before being stored in our database.
-- **Zero-Knowledge Security**: Decryption is never stored server-side. Every API request must include the user’s decryption key, ensuring that **only the user can access and use their private keys**.
+- **Zero-Knowledge Security**: Decryption keys is never stored server-side. Every API request must include the user’s decryption key, ensuring that **only the user can access and use their private keys**.
+- **Encrypted Key Storage**: Private keys are encrypted before being stored on Cloudflare RDS.
 
 This approach ensures a balance between the convenience of cloud-based services and the unmatched security of non-custodial solutions.
 
