@@ -4,6 +4,7 @@
 - image: images/setup-node/hero.jpeg
 - author: @nano2bot
 - video: true
+- hidden: true
 -----
 
 <video id="video" controls>

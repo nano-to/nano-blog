@@ -3,6 +3,7 @@
 - tags: Release
 - image: images/nano-cloud/hero.png
 - author: @nano2dev
+- hidden: true
 -----
 
 Secure programmatic wallets for the Nano blockchain. 
