@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "id": "reddit-nanocurrency",
+      "name": "r/nanocurrency",
+      "kind": "community",
+      "url": "https://www.reddit.com/r/nanocurrency/",
+      "collector": "scripts/fetch_reddit_nano.py",
+      "authority": "lead",
+      "notes": "Use for discovery only; verify claims against primary sources."
+    },
+    {
+      "id": "nano-rpc",
+      "name": "Nano.to RPC data",
+      "kind": "network",
+      "url": "https://rpc.nano.to",
+      "authority": "primary",
+      "notes": "Use for network and service metrics available through the ecosystem backend."
+    },
+    {
+      "id": "project-releases",
+      "name": "Project repositories and release notes",
+      "kind": "primary",
+      "url": "https://github.com/search?q=nano+topic%3Anano&type=repositories",
+      "authority": "primary",
+      "notes": "Confirm product and software launch claims here when available."
+    },
+    {
+      "id": "official-announcements",
+      "name": "Official project announcements",
+      "kind": "primary",
+      "url": "https://nano.org/",
+      "authority": "primary",
+      "notes": "Use the project's own announcement channel for final verification."
+    }
+  ]
+}
