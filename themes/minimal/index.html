@@ -1,124 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-	    <title><%- site_title %></title>
+        <title><%- site_title %></title>
         <meta name="apple-mobile-web-app-title" content="<%- site_title %>">
         <link rel="icon" type="image/png" href="<%- favicon %>">
         <meta property="og:title" content="<%- site_title %>">
         <meta property="og:image" content="<%- cover ? cover : '../img/cover.png' %>">
         <meta property="twitter:image" content="<%- cover ? cover : '../img/cover.png' %>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="stylesheet" href="../css/highlight.min.css">
+        <link rel="stylesheet" href="/css/highlight.min.css">
         <style>:root { --color: <%- color || '#3498db' %>; }</style>
-        <link rel="stylesheet" href="../css/blog.css?v=12">
-       <script>
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('lightMode')) {
-            document.documentElement.className += 'dark-mode'
-        }
-        </script>
-         <% if (metrics) { %><script src="https://metrics.bar/js/script.js" id="metrics" async defer></script><% } %>
+        <link rel="stylesheet" href="/css/blog.css?v=13">
+        <% if (metrics) { %><script src="https://metrics.bar/js/script.js" id="metrics" async defer></script><% } %>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div id="title">
-                    <a href="/">
-                        <h2 class="title"><%- title %></h2>
-                    </a>
-                    <% if (verified) { %>
-                    <img src="img/verified.png" alt="" style=" max-width: 20px; margin: 0; display: inline-block; vertical-align: text-top; margin-top: 1px; ">
-                    <% } %>
-                </div>
-                <div class="menu-items">
-                    <% if (twitter) { %>
-                    <div>
-                        <a href="https://twitter.com/<%- twitter.replace('https://twitter.com/', '').replace('@', '') %>" style="border: 0" target="_blank">
-                            <img alt="" src="../img/twitter.svg" style="max-width: 25px;margin: 0;display: inline-block;vertical-align: text-top;margin-top: 1px;height: 25px;">
-                            </img>
-                        </a>
-                    </div>
-                    <% } %>
-                    <% if (github) { %>
-                    <div>
-                        <a href="https://github.com/<%- github.replace('https://github.com/', '').replace('@', '') %>" style="border: 0" target="_blank">
-                            <img alt="" class="dark-invert" src="../img/github.svg" style=" max-width: 25px; margin: 0; display: inline-block; vertical-align: text-top; margin-top: 1px; ">
-                            </img>
-                        </a>
-                    </div>
-                    <% } %>
-                    <% if (website) { %>
-                    <div>
-                        <a href="https://<%- website %>" style="border: 0" target="_blank">
-                            <img alt="" src="https://icons.duckduckgo.com/ip3/<%- website %>.ico" style=" max-width: <%- iconSize ? iconSize : '25px' %>; margin: 0; display: inline-block; vertical-align: text-top; margin-top: 1px; ">
-                            </img>
-                        </a>
-                    </div>
-                    <% } %>
-                </div>
-
-            </div>
+        <header class="site-header">
+            <a class="wordmark" href="/"><%- title %></a>
+            <nav aria-label="Primary navigation">
+                <% nav.slice(0, 4).map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>"><%- item %></a><% }) %>
+            </nav>
+            <a class="header-link" href="https://<%- website %>" target="_blank" rel="noreferrer"><%- website %> <span aria-hidden="true">&#8599;</span></a>
         </header>
 
-        <div class="home">
-
-            <%
-
-                function chunkedArray(array, size) {
-                  const chunkedArray = []
-                  for (var i = 0; i < array.length; i += size) {
-                   chunkedArray.push(array.slice(i, i + size))
-                  }
-                  return chunkedArray
-                }
-
-                var chunked = chunkedArray(articles, 3)
-
-            %>
-
-            <% chunked.map(chunk => { %>
-            <div class="row">
-                <% chunk.map(article => { %>
+        <main class="home">
+            <div class="listing-heading">
+                <h1>Latest</h1>
+                <span><%- articles.length %> articles</span>
+            </div>
+            <div class="topic-row" aria-label="Topics">
+                <% nav.map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>"><%- item %></a><% }) %>
+            </div>
+            <div class="article-grid">
+                <% articles.map(article => { %>
                     <%
                         var image = article.image
                         if (image && !image.includes('//')) image = '../../' + image
                     %>
-                    <div class="col">
-                            <div class="card">
-                                <a href="<%- article.path ? '/' + article.path : '' %>/<%- article.slug %>.html">
-                                    <div class="card-image">
-                                        <img alt="" src="<%- image %>">
-                                    </div>
-                                </a>
-                                <div class="card-content">
-                                        <p class="kicker">
-                                            <% if (article.price) { %> <span style=" color: #3498db; ">Premium</span> · <% } %>
-                                            <% if (article.price) { %><% } %> 
-                                            <a href="<%- article.website ? ('https://' + article.website) : ('/' + article.author) %>" target="<%- article.website ? '_blank' : '_self' %>" style="border-bottom: 0"><span style=" color: var(--color); font-weight: bold "><%- article.author %></span></a></span>
-                                        </p>
-                                        <a href="<%- article.path ? '/' + article.path : '' %>/<%- article.slug %>.html">
-                                        <h2>
-                                            <%- article.title %>
-                                        </h2>
-                                        </a>
-                                        <time style="margin: 0;font-size: 16px;">
-                                            <a style=" color: var(--color); font-weight: bold " href="/tag/<%- article.tags ? article.tags.split(', ')[0].toLowerCase().split(' ').join('-') : '' %>"><%- article.tags ? article.tags.split(', ')[0] : '' %> </a> ·
-                                            <%- article.fromNow %>
-                                        </time>
-                                </div>
+                    <article class="article-card">
+                        <a class="card-image" href="<%- article.path ? '/' + article.path : '' %>/<%- article.slug %>.html">
+                            <% if (image) { %><img alt="" src="<%- image %>"><% } else { %><span></span><% } %>
+                        </a>
+                        <a class="card-title" href="<%- article.path ? '/' + article.path : '' %>/<%- article.slug %>.html"><h2><%- article.title %></h2></a>
+                        <div class="card-meta">
+                            <% if (article.price) { %><span>Premium</span><% } %>
+                            <% if (article.tags) { %><a href="/tag/<%- article.tags.split(', ')[0].toLowerCase().split(' ').join('-') %>"><%- article.tags.split(', ')[0] %></a><% } %>
+                            <time datetime="<%- article.date %>"><%- article.fromNow %></time>
                         </div>
-                    </div>
+                    </article>
                 <% }) %>
             </div>
-            <% }) %>
-        </div>
-        <footer>
-            <% if (footer) { %>
-                <%- footer %>
-            <% } else { %>
-            <a href="../"><div class="logo"><%- title %></div></a>
-            <% } %>
-        </footer>
+        </main>
+        <footer><%- footer || title %></footer>
     </body>
 </html>
