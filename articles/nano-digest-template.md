@@ -10,6 +10,20 @@
 > Editorial draft. Replace `YYYY-MM`, verify every claim, and remove
 > `hidden: true` only when this issue is ready to publish.
 
+## Protocol Development
+
+### Features in Progress
+
+<!-- AI-assisted summaries of substantive open Nano node PRs. -->
+
+### Future Features
+
+<!-- Proposed or planned work that is not merged or released. Label uncertainty. -->
+
+### Versions and Releases
+
+<!-- Released versions and merged work, clearly separating merged from shipped. -->
+
 ## Network and Protocol
 
 <!-- Releases, upgrades, network health, and verified Nano.to metrics. -->

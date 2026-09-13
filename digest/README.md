@@ -10,6 +10,7 @@ semi-automatic, but every item must be reviewed before publication.
 digest/
   sources.json       Source registry and collection notes
   schema.json        Shape of normalized research items and issues
+  protocol/          Protocol PR, release, and AI assessment workflow
   issues/            Reviewed issue records and published issue notes
   drafts/            Working research notes, if needed
 ```
@@ -34,6 +35,7 @@ publishes every Markdown file there.
 ## Initial Sections
 
 - Network and protocol
+- Protocol development
 - Releases and products
 - Wallets, merchants, and integrations
 - Developer and infrastructure activity
@@ -43,3 +45,20 @@ publishes every Markdown file there.
 Reddit is a discovery source, not an authority. Use it to find leads, then
 confirm important claims from project repositories, release notes, official
 announcements, or Nano.to network data.
+
+## Protocol Development Review
+
+The protocol section is assembled from open pull requests, merged pull
+requests, and version/release data from the Nano node repository. An AI pass
+can summarize and classify the material into:
+
+- **Features in progress:** substantive open PRs with active implementation
+  work, not every open maintenance ticket.
+- **Future features:** roadmap or design work that is not merged or released;
+  label these as proposed or speculative.
+- **Versions and releases:** released versions and merged work, with a clear
+  distinction between code merged and software shipped.
+
+The AI output is research assistance only. A human must inspect the PR, diff,
+labels, discussion, release notes, and source links before an issue is
+published.

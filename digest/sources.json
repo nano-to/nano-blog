@@ -32,6 +32,22 @@
       "url": "https://nano.org/",
       "authority": "primary",
       "notes": "Use the project's own announcement channel for final verification."
+    },
+    {
+      "id": "nano-node-pulls",
+      "name": "Nano node pull requests",
+      "kind": "protocol",
+      "url": "https://github.com/nanocurrency/nano-node/pulls",
+      "authority": "primary",
+      "notes": "Collect open and merged PR metadata for AI-assisted protocol development review."
+    },
+    {
+      "id": "nano-node-releases",
+      "name": "Nano node releases",
+      "kind": "protocol",
+      "url": "https://github.com/nanocurrency/nano-node/releases",
+      "authority": "primary",
+      "notes": "Use releases to distinguish shipped versions from merged but unreleased work."
     }
   ]
 }

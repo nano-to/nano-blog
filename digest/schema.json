@@ -17,6 +17,9 @@
     "items": {
       "type": "array",
       "items": { "$ref": "#/$defs/item" }
+    },
+    "protocol_development": {
+      "$ref": "#/$defs/protocol_development"
     }
   },
   "$defs": {
@@ -29,6 +32,7 @@
           "type": "string",
           "enum": [
             "network",
+            "protocol",
             "release",
             "product",
             "integration",
@@ -49,7 +53,30 @@
           "enum": ["unverified", "lead", "confirmed"]
         },
         "editorial_note": { "type": "string" },
+        "development_status": {
+          "type": "string",
+          "enum": ["in_progress", "future", "merged", "released"]
+        },
+        "version": { "type": "string" },
         "featured": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "protocol_development": {
+      "type": "object",
+      "properties": {
+        "open_prs": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "merged_prs": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "releases": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "assessment": {
+          "type": "object",
+          "properties": {
+            "in_progress": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+            "future": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+            "versions": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+          },
+          "additionalProperties": false
+        }
       },
       "additionalProperties": false
     }

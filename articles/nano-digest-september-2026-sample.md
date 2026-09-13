@@ -10,6 +10,36 @@
 > should be reviewed and expanded with primary-source reporting before this
 > becomes a regular monthly edition.
 
+## Protocol Development
+
+This section is designed to turn Nano node development activity into a concise
+monthly assessment. The sample links below show the source groups; a production
+issue would contain specific PRs, merged changes, and release notes collected
+for the month.
+
+### Features in Progress
+
+### [Open Nano node pull requests](https://github.com/nanocurrency/nano-node/pulls)
+
+AI-assisted summaries of substantive open PRs, including what is being built,
+its current review state, and what remains uncertain.
+
+### Future Features
+
+### [Nano node discussions](https://github.com/nanocurrency/nano-node/discussions)
+
+Proposals and design conversations can become future-feature candidates, but
+they must be labeled proposed or speculative unless a primary source confirms
+an implementation plan.
+
+### Versions and Releases
+
+### [Nano node releases](https://github.com/nanocurrency/nano-node/releases)
+
+Released versions anchor the timeline. Merged PRs belong here only when the
+issue can explain whether they are already shipped or still waiting for a
+release.
+
 ## Network and Protocol
 
 ### [Nano.to RPC service](https://rpc.nano.to)
