@@ -6,8 +6,6 @@
 - author: @nano2dev
 - website: nano.to
 -----
-# Nano Digest - September 2026 Sample
-
 > **Sample issue:** This is a layout and editorial-format preview. Each item
 > should be reviewed and expanded with primary-source reporting before this
 > becomes a regular monthly edition.

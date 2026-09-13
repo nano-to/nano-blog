@@ -7,8 +7,6 @@
 - author: @nano2dev
 - website: nano.to
 -----
-# Nano Digest: September 2026
-
 > Editorial draft. Replace `YYYY-MM`, verify every claim, and remove
 > `hidden: true` only when this issue is ready to publish.
 
