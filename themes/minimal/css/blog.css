@@ -53,6 +53,8 @@ img { display: block; max-width: 100%; }
 #article-body h2 { font-size: clamp(29px, 3vw, 40px); }
 #article-body h3 { font-size: 25px; }
 #article-body.digest-article p strong a { border-bottom: 1px solid currentColor; color: var(--color); font-weight: 500; }
+#article-body.digest-article p:has(> strong > a) { margin-bottom: .3rem; }
+#article-body.digest-article p:has(> strong > a) + p { margin-top: 0; }
 #article-body.digest-article ul { list-style: none; padding-left: 0; }
 #article-body.digest-article li { border-bottom: 1px solid var(--line); margin: 0; padding: .6rem 0; }
 #article-body.digest-article li a { color: var(--color); }
