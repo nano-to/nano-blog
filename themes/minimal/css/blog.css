@@ -55,6 +55,8 @@ img { display: block; max-width: 100%; }
 #article-body.digest-article h3 { border-top: 1px solid var(--line); font-size: 22px; margin: 2.5rem 0 .5rem; padding-top: 1.25rem; }
 #article-body.digest-article h3:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
 #article-body.digest-article h3 a { border-bottom: 0; }
+#article-body.digest-article h4 { color: var(--muted); font-size: 14px; letter-spacing: .04em; margin: 2rem 0 .75rem; text-transform: uppercase; }
+#article-body.digest-article p strong a { border-bottom: 0; font-weight: 500; }
 #article-body ul, #article-body ol { padding-left: 1.25rem; }
 #article-body li { margin-bottom: .5rem; }
 #article-body a { border-bottom: 1px solid currentColor; }

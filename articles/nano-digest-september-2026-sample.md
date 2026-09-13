@@ -16,14 +16,14 @@
 
 #### Features in Progress
 
-### [Open Nano node pull requests](https://github.com/nanocurrency/nano-node/pulls)
+**[Open Nano node pull requests](https://github.com/nanocurrency/nano-node/pulls)**
 
 AI-assisted summaries of substantive open PRs, including what is being built,
 its review state, and what remains uncertain.
 
 #### Future Features
 
-### [Nano node discussions](https://github.com/nanocurrency/nano-node/discussions)
+**[Nano node discussions](https://github.com/nanocurrency/nano-node/discussions)**
 
 Proposals and design conversations can become future-feature candidates, but
 they must be labeled proposed or speculative unless a primary source confirms
@@ -31,56 +31,56 @@ an implementation plan.
 
 #### Versions
 
-### [Nano node releases](https://github.com/nanocurrency/nano-node/releases)
+**[Nano node releases](https://github.com/nanocurrency/nano-node/releases)**
 
 Released versions anchor the timeline. Merged PRs should be separated from
 shipped versions so readers know what is available now.
 
-### [Nano.to RPC service](https://rpc.nano.to)
+**[Nano.to RPC service](https://rpc.nano.to)**
 
 Verified network and service metrics can provide the factual foundation for
 this section.
 
 ## Ecosystem
 
-### [Nano.js SDK](https://github.com/nano-to/nano-js)
+**[Nano.js SDK](https://github.com/nano-to/nano-js)**
 
 Client SDK activity, wallet support, merchant tooling, exchanges, and
 integrations belong here when they affect the wider ecosystem.
 
-### [Nano.to services](https://nano.to)
+**[Nano.to services](https://nano.to)**
 
 An ecosystem roundup should help readers discover what they can use today.
 
 ## Products Launched
 
-### [NanoPay 2.0.16](https://github.com/nano-to/pay-js/commits/master/)
+**[NanoPay 2.0.16](https://github.com/nano-to/pay-js/commits/master/)**
 
 The browser payment library received checkout layout improvements for email,
 shipping, and order-summary fields.
 
-### [NanoPay documentation](https://docs.nano.to/nanopay)
+**[NanoPay documentation](https://docs.nano.to/nanopay)**
 
 Integration examples show how to add Nano checkout to a web page.
 
 ## Projects and Funding
 
-### [Nano project repositories](https://github.com/search?q=nano+topic%3Anano&type=repositories)
+**[Nano project repositories](https://github.com/search?q=nano+topic%3Anano&type=repositories)**
 
 Track new projects, grants, funded development, and meaningful milestones here.
 Every claim should link to the project or funding announcement.
 
 ## Community
 
-### [r/nanocurrency](https://www.reddit.com/r/nanocurrency/)
+**[r/nanocurrency](https://www.reddit.com/r/nanocurrency/)**
 
 A discovery channel for community discussion and project leads.
 
-### [Nano community resources](https://nano.community/)
+**[Nano community resources](https://nano.community/)**
 
 Community-maintained information and project references.
 
-### [Nano.org](https://nano.org/)
+**[Nano.org](https://nano.org/)**
 
 Official announcements and background material.
 
@@ -89,7 +89,7 @@ against primary sources before publication.
 
 ## Market Context
 
-### [Nano market data](https://coinmarketcap.com/currencies/nano/)
+**[Nano market data](https://coinmarketcap.com/currencies/nano/)**
 
 Market and exchange context can help explain attention around Nano, but it
 should remain clearly separate from protocol and technology reporting.
@@ -103,7 +103,7 @@ should remain clearly separate from protocol and technology reporting.
 
 ## Reader Submissions
 
-### [Submit a Nano project update](https://nano.to)
+**[Submit a Nano project update](https://nano.to)**
 
 Future issues can include reviewed launch notes and milestones submitted by
 builders, merchants, and community members.
