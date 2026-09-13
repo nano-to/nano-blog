@@ -13,45 +13,74 @@
 
 ## Network and Protocol
 
-The Nano.to ecosystem continues to use `nano-rpc` as its backend center for
-RPC access, checkout contracts, payment monitoring, webhooks, and production
-operations. The service guide records the current Docker-based production
-topology and operational verification.
+- ### [Nano.to RPC service](https://rpc.nano.to)
+  Public RPC access for applications and services built on Nano.
 
-[Read the nano-rpc project guide](https://github.com/nano-to/nano-rpc/blob/master/AGENTS.md)
+- ### [Nano RPC production operations](https://github.com/nano-to/nano-rpc)
+  The backend handles RPC proxying, rate limiting, proof-of-work, and service
+  operations.
+
+- ### [Nano protocol resources](https://nano.org/resources)
+  Primary reference material for readers who want protocol and network context.
+
+Each item should link to a primary source or a verifiable service endpoint.
 
 ## Releases and Products
 
-NanoPay reached version 2.0.16 with a more consistent checkout layout. The
-release aligns email, shipping, and order-summary fields and keeps required
-fields visually distinct from their labels.
+- ### [NanoPay 2.0.16](https://github.com/nano-to/pay-js/commits/master/)
+  The browser payment library received checkout layout improvements for email,
+  shipping, and order-summary fields.
 
-[View the NanoPay source](https://github.com/nano-to/pay-js)
+- ### [NanoPay documentation](https://docs.nano.to/nanopay)
+  Integration examples show how to add Nano checkout to a web page.
+
+- ### [Nano.js SDK](https://github.com/nano-to/nano-js)
+  A client SDK for applications that need a programmatic Nano interface.
+
+The final issue should replace repository links with the specific release,
+announcement, or product page for each item.
 
 ## Integrations and Adoption
 
-The NanoPay documentation now demonstrates live checkout examples through the
-Nano.to service. Examples use the public `@development` recipient so readers
-can exercise the flow without placing funds at an arbitrary placeholder
-address.
+- ### [Try NanoPay](https://docs.nano.to/nanopay)
+  A live documentation example demonstrates a Nano checkout flow.
 
-[Open the NanoPay documentation](https://docs.nano.to/nanopay)
+- ### [NanoPay integration article](https://blog.nano.to/introducing-nano-pay-simple-web-payments.html)
+  The article explains the browser integration and payment-button model.
+
+- ### [Nano.to services](https://nano.to)
+  The ecosystem homepage links to available Nano infrastructure and products.
+
+Adoption items should include what was integrated, who shipped it, and where a
+reader can try or verify it.
 
 ## Developers and Infrastructure
 
-The ecosystem has separate ownership boundaries: `nano-js` provides the client
-SDK, `pay-js` provides the browser payment library, and `nano-rpc` owns the
-server contract. Keeping those boundaries explicit makes cross-project changes
-easier to verify and release safely.
+- ### [Nano.js](https://github.com/nano-to/nano-js)
+  Client-side wallet and payment functionality for JavaScript applications.
 
-[Explore the Nano SDK](https://github.com/nano-to/nano-js)
+- ### [pay-js](https://github.com/nano-to/pay-js)
+  Browser-native payment UI and wallet handoff support.
+
+- ### [nano-rpc](https://github.com/nano-to/nano-rpc)
+  Server-side RPC, checkout, webhook, and payment-monitor infrastructure.
+
+This section is a good place for code releases, grants, tooling, node hosting,
+and infrastructure announcements.
 
 ## Community and Governance
 
-Reddit is being added as a discovery source for future issues. Candidate posts
-will be collected for editorial review, but important claims will be confirmed
-against project repositories, release notes, official announcements, or
-verified network data before publication.
+- ### [r/nanocurrency](https://www.reddit.com/r/nanocurrency/)
+  A discovery channel for community discussion and project leads.
+
+- ### [Nano community resources](https://nano.community/)
+  Community-maintained information and project references.
+
+- ### [Nano.org](https://nano.org/)
+  Official ecosystem announcements and background material.
+
+Reddit and other community sources are leads, not authority. Important claims
+must be confirmed against primary sources before publication.
 
 ## What to Watch Next Month
 
