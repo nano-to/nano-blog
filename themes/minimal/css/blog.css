@@ -6,8 +6,6 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--page); color: var(--ink); font-family: "OpenAI Sans", Arial, sans-serif; font-size: 17px; font-weight: 400; letter-spacing: -.01em; line-height: 1.65; }
 #goal-meter, #goal-meter * { font-family: "OpenAI Sans", Arial, sans-serif !important; }
-.nano-pay-example { background: var(--ink); border: 0; border-radius: 999px; color: var(--page); cursor: pointer; font: inherit; font-size: 15px; padding: .7rem 1.1rem; }
-.nano-pay-example:hover { opacity: .78; }
 .nano-pay-example-wall { border: 1px solid var(--line); margin: 1rem 0 1.75rem; padding: 1rem; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
