@@ -52,7 +52,11 @@ img { display: block; max-width: 100%; }
 #article-body h2, #article-body h3 { font-weight: 500; letter-spacing: -.035em; line-height: 1.15; margin: 4rem 0 1.25rem; }
 #article-body h2 { font-size: clamp(29px, 3vw, 40px); }
 #article-body h3 { font-size: 25px; }
-#article-body.digest-article p strong a { border-bottom: 0; font-weight: 500; }
+#article-body.digest-article p strong a { border-bottom: 1px solid currentColor; color: var(--color); font-weight: 500; }
+#article-body.digest-article ul { list-style: none; padding-left: 0; }
+#article-body.digest-article li { border-bottom: 1px solid var(--line); margin: 0; padding: .6rem 0; }
+#article-body.digest-article li a { color: var(--color); }
+#article-body.digest-article li:last-child { border-bottom: 0; }
 #article-body ul, #article-body ol { padding-left: 1.25rem; }
 #article-body li { margin-bottom: .5rem; }
 #article-body a { border-bottom: 1px solid currentColor; }
