@@ -12,23 +12,9 @@
 
 ## Network
 
-### Protocol Development
+**Protocol development:** <!-- Link open PRs, future-feature discussions, and releases; group them into features in progress, future features, and versions. -->
 
-<!-- Use AI-assisted summaries of open PRs, merged PRs, and releases. -->
-
-#### Features in Progress
-
-<!-- Substantive open PRs with evidence of active implementation work. -->
-
-#### Future Features
-
-<!-- Proposed or planned work that is not merged or released. Label uncertainty. -->
-
-#### Versions
-
-<!-- Released versions and notable merged work, separating merged from shipped. -->
-
-<!-- Add verified network metrics and protocol changes here. -->
+**Network data:** <!-- Add verified network metrics and protocol changes. -->
 
 ## Ecosystem
 

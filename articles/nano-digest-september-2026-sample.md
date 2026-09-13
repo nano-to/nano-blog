@@ -12,34 +12,14 @@
 
 ## Network
 
-### Protocol Development
+**Protocol development:** AI-assisted summaries of [open Nano node pull
+requests](https://github.com/nanocurrency/nano-node/pulls), [future-feature
+discussions](https://github.com/nanocurrency/nano-node/discussions), and [Nano
+node releases](https://github.com/nanocurrency/nano-node/releases), grouped
+into features in progress, future features, and versions.
 
-#### Features in Progress
-
-**[Open Nano node pull requests](https://github.com/nanocurrency/nano-node/pulls)**
-
-AI-assisted summaries of substantive open PRs, including what is being built,
-its review state, and what remains uncertain.
-
-#### Future Features
-
-**[Nano node discussions](https://github.com/nanocurrency/nano-node/discussions)**
-
-Proposals and design conversations can become future-feature candidates, but
-they must be labeled proposed or speculative unless a primary source confirms
-an implementation plan.
-
-#### Versions
-
-**[Nano node releases](https://github.com/nanocurrency/nano-node/releases)**
-
-Released versions anchor the timeline. Merged PRs should be separated from
-shipped versions so readers know what is available now.
-
-**[Nano.to RPC service](https://rpc.nano.to)**
-
-Verified network and service metrics can provide the factual foundation for
-this section.
+**Network data:** [Nano.to RPC service](https://rpc.nano.to) provides verified
+metrics for the issue.
 
 ## Ecosystem
 
