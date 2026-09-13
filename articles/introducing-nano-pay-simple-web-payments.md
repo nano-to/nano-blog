@@ -182,11 +182,6 @@ NanoPay.wall({
 })
 ```
 
-## eCommerce Intergration
-
-- **Shopify: In Development**
-- **Wordpress: TBD**
-
 **I work on Nano part-time. Please consider helping fund this kind of work. Anything helps.**
 
 [funding]
