@@ -8,10 +8,6 @@
 - goal: 500|NanoPay + eCommerce
 -----
 
-## Live Demo
-
-[https://pay.nano.to](https://pay.nano.to)
-
 ## Edit on CodePen
 
 [https://codepen.io/nano2dev/pen/VwRQypE](https://codepen.io/nano2dev/pen/VwRQypE)
@@ -28,7 +24,7 @@ First, add NanoPay to your project's *index.html*.
 
 **CDN:**
 ```html
-<script src="https://pay.nano.to/latest.js?v=2.0.3"></script>
+<script src="https://cdn.nano.to/pay.js?v=2.0.3"></script>
 ```
 
 **Local:**
@@ -36,7 +32,7 @@ First, add NanoPay to your project's *index.html*.
 <script src="/NanoPay.js"></script>
 ```
 
-Download [latest](https://pay.nano.to/latest.js?v=2.0.3) version.
+Download [latest](https://cdn.nano.to/pay.js?v=2.0.3) version.
 
 ## Simple Usage
 
@@ -51,6 +47,8 @@ data-button="Open Natrium"
 data-position="bottom">
 Tip 0.133 NANO</a>
 ```
+
+<button class="nano-pay-example" type="button" onclick="window.NanoPay.open({ title: 'Tip @Nano2Dev', address: '@development', amount: 0.0001, button: 'Open Wallet', position: 'bottom', cancel: function () { console.log('User cancelled') } })">Try the simple payment</button>
 
 ## Javascript API
 
@@ -89,6 +87,8 @@ NanoPay.open({
 })
 ```
 
+<button class="nano-pay-example" type="button" onclick="window.NanoPay.open({ title: 'Demo Order', address: '@development', amount: 0.0001, line_items: [{ name: 'Shirt (X-Small)', price: 0.0001 }, { name: 'Mens Shoes (9.5)', price: 0.0002 }], button: 'Open Wallet', cancel: function () { console.log('User cancelled') } })">Try the line-item checkout</button>
+
 ## All Options
 
 - **title**: (*string*) Show custom title shown in popup.
@@ -126,6 +126,8 @@ NanoPay.open({
 })
 ```
 
+<button class="nano-pay-example" type="button" onclick="window.NanoPay.open({ title: 'Email and Shipping Demo', address: '@development', notify: 'support@nano.to', contact: true, shipping: true, amount: 0.0001, button: 'Open Wallet', cancel: function () { console.log('User cancelled') } })">Try email and shipping</button>
+
 ![Email Notification](../../images/nano-pay/email.png)
 
 ## Login with Nano
@@ -148,6 +150,8 @@ NanoPay.open({
   }
 })
 ```
+
+<button class="nano-pay-example" type="button" onclick="window.NanoPay.open({ title: 'Login with Nano', address: '@development', amount: 0.0001, button: 'Open Wallet', success: function (block) { console.log('Authenticated payment:', block && (block.username || block.address)) }, cancel: function () { console.log('User cancelled') } })">Try Login with Nano</button>
 
 ## HTML Content Paywall
 
@@ -181,6 +185,9 @@ NanoPay.wall({
     }
 })
 ```
+
+<button class="nano-pay-example" type="button" onclick="window.NanoPay.wall({ element: '#nano-pay-example-wall', title: 'Read Story', button: 'Unlock Story', free: true, amount: 0.0001, address: '@development', success: function (block) { console.log('Paywall unlocked:', block) } })">Enable the paywall demo</button>
+<div id="nano-pay-example-wall" class="nano-pay-example-wall">This is sample content that the paywall demo can lock.</div>
 
 **I work on Nano part-time. Please consider helping fund this kind of work. Anything helps.**
 
