@@ -25,7 +25,7 @@ First, add NanoPay to your project's *index.html*.
 
 **CDN:**
 ```html
-<script src="https://cdn.nano.to/pay.js?v=2.0.5"></script>
+<script src="https://cdn.nano.to/pay.js?v=2.0.6"></script>
 ```
 
 **Local:**
@@ -33,7 +33,7 @@ First, add NanoPay to your project's *index.html*.
 <script src="/NanoPay.js"></script>
 ```
 
-Download [latest](https://cdn.nano.to/pay.js?v=2.0.5) version.
+Download [latest](https://cdn.nano.to/pay.js?v=2.0.6) version.
 
 ## Simple Usage
 
