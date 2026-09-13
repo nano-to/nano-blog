@@ -33,8 +33,10 @@
           "enum": [
             "network",
             "protocol",
+            "ecosystem",
             "release",
             "product",
+            "funding",
             "integration",
             "developer",
             "infrastructure",

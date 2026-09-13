@@ -6,25 +6,22 @@
 - author: @nano2dev
 - website: nano.to
 -----
-> **Sample issue:** This is a layout and editorial-format preview. Each item
-> should be reviewed and expanded with primary-source reporting before this
-> becomes a regular monthly edition.
+> **Sample issue:** This is a layout and editorial-format preview. The links
+> demonstrate the intended structure; a real issue would replace them with
+> verified stories from the month.
 
-## Protocol Development
+## Network
 
-This section is designed to turn Nano node development activity into a concise
-monthly assessment. The sample links below show the source groups; a production
-issue would contain specific PRs, merged changes, and release notes collected
-for the month.
+### Protocol Development
 
-### Features in Progress
+#### Features in Progress
 
 ### [Open Nano node pull requests](https://github.com/nanocurrency/nano-node/pulls)
 
 AI-assisted summaries of substantive open PRs, including what is being built,
-its current review state, and what remains uncertain.
+its review state, and what remains uncertain.
 
-### Future Features
+#### Future Features
 
 ### [Nano node discussions](https://github.com/nanocurrency/nano-node/discussions)
 
@@ -32,32 +29,30 @@ Proposals and design conversations can become future-feature candidates, but
 they must be labeled proposed or speculative unless a primary source confirms
 an implementation plan.
 
-### Versions and Releases
+#### Versions
 
 ### [Nano node releases](https://github.com/nanocurrency/nano-node/releases)
 
-Released versions anchor the timeline. Merged PRs belong here only when the
-issue can explain whether they are already shipped or still waiting for a
-release.
-
-## Network and Protocol
+Released versions anchor the timeline. Merged PRs should be separated from
+shipped versions so readers know what is available now.
 
 ### [Nano.to RPC service](https://rpc.nano.to)
 
-Public RPC access for applications and services built on Nano.
+Verified network and service metrics can provide the factual foundation for
+this section.
 
-### [Nano RPC production operations](https://github.com/nano-to/nano-rpc)
+## Ecosystem
 
-The backend handles RPC proxying, rate limiting, proof-of-work, and service
-operations.
+### [Nano.js SDK](https://github.com/nano-to/nano-js)
 
-### [Nano protocol resources](https://nano.org/resources)
+Client SDK activity, wallet support, merchant tooling, exchanges, and
+integrations belong here when they affect the wider ecosystem.
 
-Primary reference material for readers who want protocol and network context.
+### [Nano.to services](https://nano.to)
 
-Each item should link to a primary source or a verifiable service endpoint.
+An ecosystem roundup should help readers discover what they can use today.
 
-## Releases and Products
+## Products Launched
 
 ### [NanoPay 2.0.16](https://github.com/nano-to/pay-js/commits/master/)
 
@@ -68,48 +63,14 @@ shipping, and order-summary fields.
 
 Integration examples show how to add Nano checkout to a web page.
 
-### [Nano.js SDK](https://github.com/nano-to/nano-js)
+## Projects and Funding
 
-A client SDK for applications that need a programmatic Nano interface.
+### [Nano project repositories](https://github.com/search?q=nano+topic%3Anano&type=repositories)
 
-The final issue should replace repository links with the specific release,
-announcement, or product page for each item.
+Track new projects, grants, funded development, and meaningful milestones here.
+Every claim should link to the project or funding announcement.
 
-## Integrations and Adoption
-
-### [Try NanoPay](https://docs.nano.to/nanopay)
-
-A live documentation example demonstrates a Nano checkout flow.
-
-### [NanoPay integration article](https://blog.nano.to/introducing-nano-pay-simple-web-payments.html)
-
-The article explains the browser integration and payment-button model.
-
-### [Nano.to services](https://nano.to)
-
-The ecosystem homepage links to available Nano infrastructure and products.
-
-Adoption items should include what was integrated, who shipped it, and where a
-reader can try or verify it.
-
-## Developers and Infrastructure
-
-### [Nano.js](https://github.com/nano-to/nano-js)
-
-Client-side wallet and payment functionality for JavaScript applications.
-
-### [pay-js](https://github.com/nano-to/pay-js)
-
-Browser-native payment UI and wallet handoff support.
-
-### [nano-rpc](https://github.com/nano-to/nano-rpc)
-
-Server-side RPC, checkout, webhook, and payment-monitor infrastructure.
-
-This section is a good place for code releases, grants, tooling, node hosting,
-and infrastructure announcements.
-
-## Community and Governance
+## Community
 
 ### [r/nanocurrency](https://www.reddit.com/r/nanocurrency/)
 
@@ -121,22 +82,36 @@ Community-maintained information and project references.
 
 ### [Nano.org](https://nano.org/)
 
-Official ecosystem announcements and background material.
+Official announcements and background material.
 
-Reddit and other community sources are leads, not authority. Important claims
-must be confirmed against primary sources before publication.
+Community sources are leads, not authority. Important claims must be confirmed
+against primary sources before publication.
 
-## What to Watch Next Month
+## Market Context
+
+### [Nano market data](https://coinmarketcap.com/currencies/nano/)
+
+Market and exchange context can help explain attention around Nano, but it
+should remain clearly separate from protocol and technology reporting.
+
+## What Is Next
 
 - Establish a repeatable monthly cutoff and publication date.
 - Add verified network metrics supplied by `nano-rpc`.
-- Test the Reddit collector with an approved access method if public requests
-  continue to be blocked.
-- Invite Nano projects to submit launches and updates for consideration.
+- Review open and merged protocol PRs with the AI assessment workflow.
+- Invite Nano projects to submit launches, funding, and milestones.
+
+## Reader Submissions
+
+### [Submit a Nano project update](https://nano.to)
+
+Future issues can include reviewed launch notes and milestones submitted by
+builders, merchants, and community members.
 
 ## Sources
 
 - [Nano.to documentation](https://docs.nano.to/)
 - [nano-rpc](https://github.com/nano-to/nano-rpc)
+- [nano-node](https://github.com/nanocurrency/nano-node)
 - [pay-js](https://github.com/nano-to/pay-js)
 - [nano-js](https://github.com/nano-to/nano-js)

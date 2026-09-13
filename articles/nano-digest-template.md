@@ -10,19 +10,53 @@
 > Editorial draft. Replace `YYYY-MM`, verify every claim, and remove
 > `hidden: true` only when this issue is ready to publish.
 
-## Protocol Development
+## Network
 
-### Features in Progress
+### Protocol Development
 
-<!-- AI-assisted summaries of substantive open Nano node PRs. -->
+<!-- Use AI-assisted summaries of open PRs, merged PRs, and releases. -->
 
-### Future Features
+#### Features in Progress
+
+<!-- Substantive open PRs with evidence of active implementation work. -->
+
+#### Future Features
 
 <!-- Proposed or planned work that is not merged or released. Label uncertainty. -->
 
-### Versions and Releases
+#### Versions
 
-<!-- Released versions and merged work, clearly separating merged from shipped. -->
+<!-- Released versions and notable merged work, separating merged from shipped. -->
+
+<!-- Add verified network metrics and protocol changes here. -->
+
+## Ecosystem
+
+<!-- Wallets, merchants, exchanges, integrations, and ecosystem activity. -->
+
+## Products Launched
+
+<!-- New products and meaningful product releases from this month. -->
+
+## Projects and Funding
+
+<!-- Grants, funded work, project milestones, and teams building with Nano. -->
+
+## Community
+
+<!-- Events, discussions, governance, and notable community activity. -->
+
+## Market Context
+
+<!-- Price and exchange context, clearly separated from protocol reporting. -->
+
+## What Is Next
+
+<!-- Upcoming releases, events, and open calls for the next month. -->
+
+## Reader Submissions
+
+<!-- Reviewed submissions from Nano projects and community members. -->
 
 ## Network and Protocol
 

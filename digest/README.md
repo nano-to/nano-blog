@@ -32,15 +32,16 @@ publishes every Markdown file there.
 6. Remove `hidden: true` only after editorial review, then link the issue from social and
    the newsletter/RSS channels.
 
-## Initial Sections
+## Editorial Structure
 
-- Network and protocol
-- Protocol development
-- Releases and products
-- Wallets, merchants, and integrations
-- Developer and infrastructure activity
-- Community, events, and governance
-- What to watch next month
+- Network
+- Ecosystem
+- Products launched
+- Projects and funding
+- Community
+- Market context
+- What is next
+- Reader submissions
 
 Reddit is a discovery source, not an authority. Use it to find leads, then
 confirm important claims from project repositories, release notes, official
