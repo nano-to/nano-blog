@@ -17,17 +17,17 @@
     <body>
         <header class="site-header">
             <a class="wordmark" href="/"><%- title %></a>
-            <nav aria-label="Primary navigation"><% nav.slice(0, 4).map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>"><%- item %></a><% }) %></nav>
+            <nav aria-label="Primary navigation"><% nav.slice(0, 4).map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>/"><%- item %></a><% }) %></nav>
             <a class="header-link" href="/">All articles</a>
         </header>
         <main>
             <section class="article-lead">
-                <div class="article-meta"><time datetime="<%- article.date %>"><%- article.fromNow %></time><% if (article.tags) { %><a href="/tag/<%- article.tags.split(', ')[0].toLowerCase().split(' ').join('-') %>"><%- article.tags.split(', ')[0] %></a><% } %></div>
+                <div class="article-meta"><time datetime="<%- article.date %>"><%- article.fromNow %></time><% if (article.tags) { %><a href="/tag/<%- article.tags.split(', ')[0].toLowerCase().split(' ').join('-') %>/"><%- article.tags.split(', ')[0] %></a><% } %></div>
                 <h1><%- article.title %></h1>
                 <% if (article.excerpt) { %><p class="article-summary"><%- article.excerpt %></p><% } %>
-                <% if (article.author) { %><p class="byline">By <a href="<%- article.website ? ('https://' + article.website) : ('/' + article.author) %>" target="<%- article.website ? '_blank' : '_self' %>"><%- article.author %></a></p><% } %>
+                <% if (article.author) { %><p class="byline">By <a href="<%- article.website ? ('https://' + article.website) : ('/' + article.author + '/') %>" target="<%- article.website ? '_blank' : '_self' %>"><%- article.author %></a></p><% } %>
             </section>
-            <div class="article-rule"><a href="#article-body">Share</a></div>
+            <div class="article-rule"></div>
             <div class="article-layout">
                 <aside id="nav" aria-label="On this page"></aside>
                 <article id="article-body">
@@ -41,7 +41,10 @@
                     <% if (article.preview) { %><div id="preview"><%- article.preview %></div><% } %>
                     <div class="<%- article.price ? 'premium' : '' %>" data-id="<%- article.id %>"><%- article.html %></div>
                     <% if (!article.single && articles.length > 1) { %>
-                        <section class="more-articles"><h2>More articles</h2><ul><% articles.slice(0, 6).map(other => { %><li><a href="<%- other.path ? '/' + other.path : '' %>/<%- other.slug %>.html"><%- other.title %></a></li><% }) %></ul></section>
+                        <section class="more-articles">
+                            <div class="more-articles-heading"><h2>Related articles</h2><span>Explore more</span></div>
+                            <ol><% articles.slice(0, 6).map(other => { %><li><a href="<%- other.path ? '/' + other.path : '' %>/<%- other.slug %>.html"><span class="related-title"><%- other.title %></span><span class="related-arrow" aria-hidden="true">&#8594;</span></a></li><% }) %></ol>
+                        </section>
                     <% } %>
                 </article>
             </div>

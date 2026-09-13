@@ -8,7 +8,7 @@
 	"path": "",
 	"twitter": "@nano2dev",
 	"color": "#3498db",
-	"footer": "<a href='../'>Nano.to Blog</a>",
+	"footer": "<p>&copy; 2026 FWD Labs LLC. All rights reserved.</p><p>FWD Labs LLC is an independent infrastructure provider. We are not affiliated with the Nano Foundation. &quot;Nano&quot; refers to the Nano cryptocurrency protocol.</p>",
 	"website": "nano.to",
 	"contact": "support@nano.to",
 	"navigation": ["Crypto","Software","Hardware","Education"],

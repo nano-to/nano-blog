@@ -14,21 +14,34 @@
         <% if (metrics) { %><script src="https://metrics.bar/js/script.js" id="metrics" async defer></script><% } %>
     </head>
     <body>
+        <%
+            var pageHeading = 'Latest'
+            var pageContext = 'All articles'
+            if (title.indexOf('Tag: ') === 0) {
+                pageHeading = title.slice(5)
+                pageContext = 'Category'
+            } else if (title.charAt(0) === '@') {
+                pageHeading = title
+                pageContext = 'Author archive'
+            }
+        %>
         <header class="site-header">
             <a class="wordmark" href="/"><%- title %></a>
             <nav aria-label="Primary navigation">
-                <% nav.slice(0, 4).map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>"><%- item %></a><% }) %>
+                <% nav.slice(0, 4).map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>/"><%- item %></a><% }) %>
             </nav>
-            <a class="header-link" href="https://<%- website %>" target="_blank" rel="noreferrer"><%- website %> <span aria-hidden="true">&#8599;</span></a>
         </header>
 
         <main class="home">
             <div class="listing-heading">
-                <h1>Latest</h1>
+                <div>
+                    <p class="listing-kicker"><%- pageContext %></p>
+                    <h1><%- pageHeading %></h1>
+                </div>
                 <span><%- articles.length %> articles</span>
             </div>
             <div class="topic-row" aria-label="Topics">
-                <% nav.map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>"><%- item %></a><% }) %>
+                <% nav.map(item => { %><a href="/tag/<%- item.toLowerCase().split(' ').join('-') %>/"><%- item %></a><% }) %>
             </div>
             <div class="article-grid">
                 <% articles.map(article => { %>
@@ -43,7 +56,7 @@
                         <a class="card-title" href="<%- article.path ? '/' + article.path : '' %>/<%- article.slug %>.html"><h2><%- article.title %></h2></a>
                         <div class="card-meta">
                             <% if (article.price) { %><span>Premium</span><% } %>
-                            <% if (article.tags) { %><a href="/tag/<%- article.tags.split(', ')[0].toLowerCase().split(' ').join('-') %>"><%- article.tags.split(', ')[0] %></a><% } %>
+                            <% if (article.tags) { %><a href="/tag/<%- article.tags.split(', ')[0].toLowerCase().split(' ').join('-') %>/"><%- article.tags.split(', ')[0] %></a><% } %>
                             <time datetime="<%- article.date %>"><%- article.fromNow %></time>
                         </div>
                     </article>

@@ -51,8 +51,7 @@ cd nano-docker && sudo ./setup.sh -f -t V25.1 -m -p 8080
 
 ## Sponsor (DigitalOcean)
 
-<a align="center" target="_blank" href="https://m.do.co/c/f139acf4ddcb"><img style="object-fit: contain;
-    max-width: 100%;" src="https://github.com/fwd/fwd/raw/master/ads/digitalocean_new.png" width="970" /></a>
+<a class="digitalocean-banner" href="https://m.do.co/c/f139acf4ddcb" target="_blank" rel="noreferrer"><img src="https://images.prismic.io/www-static/950ad40c6ab7577a96f28161c42fb09eadf36b45_atlantis.jpg" alt="DigitalOcean Atlantis"></a>
 
 Optional Reading: [How To Setup a Server on Digital Ocean](https://docs.digitalocean.com/products/droplets/how-to/create/)
 

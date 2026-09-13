@@ -1,7 +1,7 @@
 - title: Introducing NanoGoal.js - Easily Visualize Nano Currency Funding
 - date: 02-16-2024
 - tags: Release
-- image: //github.com/fwd/nano-goal/raw/master/.github/banner.png
+- image: //images.prismic.io/www-static/950ad40c6ab7577a96f28161c42fb09eadf36b45_atlantis.jpg
 - author: @nano2dev
 - address: @development
 - goal: 500|Nano.to Development
@@ -39,7 +39,7 @@ Free, open source (MIT License) and Non-custodial of course.
 
 ## Sponsor (DigitalOcean)
 
-[![A mushroom-head robot](https://github.com/fwd/fwd/raw/master/ads/digitalocean_new.png 'Codey the Codecademy mascot')](https://m.do.co/c/f139acf4ddcb)
+<a class="digitalocean-banner" href="https://m.do.co/c/f139acf4ddcb" target="_blank" rel="noreferrer"><img src="https://images.prismic.io/www-static/950ad40c6ab7577a96f28161c42fb09eadf36b45_atlantis.jpg" alt="DigitalOcean Atlantis"></a>
 
 
 ## License
