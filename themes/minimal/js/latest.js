@@ -473,7 +473,7 @@
         		return
         	}
 
-            var code = `<div onclick="window.NanoPay.unlock_request('${config.title || 'Pay'}', '${config.element}', '${config.amount}', '${config.address}', '${config.notify}', '${articleId}', '${config.unique || config.cloud}')" class="nano-pay-unlock-button"><img style="" src="https://wall.nano.to/img/xno.svg" alt="">${ config.button || 'Unlock with Nano' }</div></div>`
+            var code = `<div onclick="window.NanoPay.unlock_request('${config.title || 'Pay'}', '${config.element}', '${config.amount}', '${config.address}', '${config.notify}', '${articleId}', '${config.unique || config.cloud}')" class="nano-pay-unlock-button"><img style="" src="https://cdn.nano.to/img/xno.svg" alt="">${ config.button || 'Unlock with Nano' }</div></div>`
 
             if (config.free) {
             	payment_success = true
