@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/css/highlight.min.css">
         <% if (article.video) { %><link rel="stylesheet" href="/css/plyr.css"><% } %>
         <style>:root { --color: <%- color || '#3498db' %>; }</style>
-        <link rel="stylesheet" href="/css/blog.css?v=14">
+        <link rel="stylesheet" href="/css/blog.css?v=15">
         <meta property="og:title" content="<%- article.title %>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://<%- domain %>">
@@ -30,7 +30,7 @@
             <div class="article-rule"></div>
             <div class="article-layout">
                 <aside id="nav" aria-label="On this page"></aside>
-                <article id="article-body">
+                <article id="article-body"<% if (article.digest) { %> class="digest-article"<% } %>>
                     <% if (article.image !== false) { %>
                         <%
                             var image = article.image

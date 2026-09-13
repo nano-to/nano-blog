@@ -52,6 +52,9 @@ img { display: block; max-width: 100%; }
 #article-body h2, #article-body h3 { font-weight: 500; letter-spacing: -.035em; line-height: 1.15; margin: 4rem 0 1.25rem; }
 #article-body h2 { font-size: clamp(29px, 3vw, 40px); }
 #article-body h3 { font-size: 25px; }
+#article-body.digest-article h3 { border-top: 1px solid var(--line); font-size: 22px; margin: 2.5rem 0 .5rem; padding-top: 1.25rem; }
+#article-body.digest-article h3:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+#article-body.digest-article h3 a { border-bottom: 0; }
 #article-body ul, #article-body ol { padding-left: 1.25rem; }
 #article-body li { margin-bottom: .5rem; }
 #article-body a { border-bottom: 1px solid currentColor; }

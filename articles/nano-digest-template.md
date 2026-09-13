@@ -3,6 +3,7 @@
 - tags: Digest, Nano
 - free: true
 - hidden: true
+- digest: true
 - author: @nano2dev
 - website: nano.to
 -----
