@@ -2,6 +2,7 @@
 - date: 09-13-2026
 - tags: Digest, Nano
 - free: true
+- hidden: true
 - digest: true
 - author: @nano2dev
 - website: nano.to
