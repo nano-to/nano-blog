@@ -84,6 +84,7 @@ img { display: block; max-width: 100%; }
 .more-articles li a { align-items: center; border: 0 !important; display: grid; gap: 1rem; grid-template-columns: 2.5rem minmax(0, 1fr) auto; padding: 1rem 0; }
 .more-articles li a::before { color: var(--muted); content: "0" counter(related); font-size: 13px; font-weight: 500; }
 .related-title { font-size: 18px; font-weight: 500; letter-spacing: -.02em; line-height: 1.3; }
+.related-premium { border: 1px solid var(--color); border-radius: 999px; color: var(--color); display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .02em; line-height: 1; margin-left: .5rem; padding: .3rem .5rem; vertical-align: middle; }
 .related-arrow { font-size: 21px; line-height: 1; transition: transform .2s ease; }
 .more-articles li a:hover .related-arrow { transform: translateX(4px); }
 

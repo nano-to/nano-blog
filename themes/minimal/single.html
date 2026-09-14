@@ -43,7 +43,7 @@
                     <% if (!article.single && articles.length > 1) { %>
                         <section class="more-articles">
                             <div class="more-articles-heading"><h2>Related articles</h2><span>Explore more</span></div>
-                            <ol><% articles.slice(0, 6).map(other => { %><li><a href="<%- other.path ? '/' + other.path : '' %>/<%- other.slug %>.html"><span class="related-title"><%- other.title %></span><span class="related-arrow" aria-hidden="true">&#8594;</span></a></li><% }) %></ol>
+                            <ol><% articles.slice(0, 6).map(other => { %><li><a href="<%- other.path ? '/' + other.path : '' %>/<%- other.slug %>.html"><span class="related-title"><%- other.title %><% if (other.price || other.cost) { %> <span class="related-premium">Premium</span><% } %></span><span class="related-arrow" aria-hidden="true">&#8594;</span></a></li><% }) %></ol>
                         </section>
                     <% } %>
                 </article>
@@ -67,7 +67,7 @@
         <% if (article.pay_demo) { %><script src="https://cdn.nano.to/pay.js"></script><% } %>
         <% if ((article.price || article.cost) && nano_address) { %>
         <script src="https://cdn.nano.to/pay.js"></script>
-        <script>NanoPay.wall({ button: `<%- article.button || 'Unlock Article' %>`, description: `<%- article.label || article.title || 'Unlock Article' %>`, <% if (article.free) { %> free: false, <% } %> decode: true, unique: true, amount: '<%- article.price || article.cost %>', element: '.premium', address: '<%- nano_address %>', <% if (article.seriesId) { %>seriesId: '<%- article.seriesId %>',<% } %> success: function (block) { if (document.getElementById('preview')) document.getElementById('preview').style.display = 'none'; if (block) window.event({ event: `<%- article.button || 'Unlock Article' %>`, revenue: '<%- article.price || article.cost %>' }); setTimeout(function () { <% if (article.video) { %>window.video = new Plyr('#video');<% } %> window.hljs.highlightAll() }, 100) } })</script>
+        <script>NanoPay.wall({ button: `<%- article.button || 'Unlock Article' %>`, description: `<%- article.label || 'Unlock Article' %>`, <% if (article.free) { %> free: false, <% } %> decode: true, unique: true, amount: '<%- article.price || article.cost %>', element: '.premium', address: '<%- nano_address %>', <% if (article.seriesId) { %>seriesId: '<%- article.seriesId %>',<% } %> success: function (block) { if (document.getElementById('preview')) document.getElementById('preview').style.display = 'none'; if (block) window.event({ event: `<%- article.button || 'Unlock Article' %>`, revenue: '<%- article.price || article.cost %>' }); setTimeout(function () { <% if (article.video) { %>window.video = new Plyr('#video');<% } %> window.hljs.highlightAll() }, 100) } })</script>
         <% } else { %><script>window.hljs.highlightAll()</script><% } %>
     </body>
 </html>
