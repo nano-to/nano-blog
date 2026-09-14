@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blog.nano.to/digest/schema.json",
+  "title": "Nano Digest Research",
+  "type": "object",
+  "required": ["period", "items"],
+  "properties": {
+    "period": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}$",
+      "description": "UTC month covered by the issue"
+    },
+    "fetched_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    },
+    "protocol_development": {
+      "$ref": "#/$defs/protocol_development"
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["headline", "category", "summary", "source_url"],
+      "properties": {
+        "headline": { "type": "string", "minLength": 1 },
+        "category": {
+          "type": "string",
+          "enum": [
+            "network",
+            "protocol",
+            "ecosystem",
+            "release",
+            "product",
+            "funding",
+            "integration",
+            "developer",
+            "infrastructure",
+            "community",
+            "governance",
+            "market"
+          ]
+        },
+        "summary": { "type": "string", "minLength": 1 },
+        "source_url": { "type": "string", "format": "uri" },
+        "primary_url": { "type": "string", "format": "uri" },
+        "source_name": { "type": "string" },
+        "published_at": { "type": "string", "format": "date-time" },
+        "confidence": {
+          "type": "string",
+          "enum": ["unverified", "lead", "confirmed"]
+        },
+        "editorial_note": { "type": "string" },
+        "development_status": {
+          "type": "string",
+          "enum": ["in_progress", "future", "merged", "released"]
+        },
+        "version": { "type": "string" },
+        "featured": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "protocol_development": {
+      "type": "object",
+      "properties": {
+        "open_prs": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "merged_prs": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "releases": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "assessment": {
+          "type": "object",
+          "properties": {
+            "in_progress": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+            "future": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+            "versions": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
