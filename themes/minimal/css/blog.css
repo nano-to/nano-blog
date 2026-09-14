@@ -4,7 +4,7 @@
 :root { --ink: #0d0d0d; --muted: #6d6d6d; --line: #e7e7e7; --page: #fff; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--page); color: var(--ink); font-family: "OpenAI Sans", Arial, sans-serif; font-size: 17px; font-weight: 400; letter-spacing: -.01em; line-height: 1.65; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: "OpenAI Sans", Arial, sans-serif; font-size: 18px; font-weight: 400; letter-spacing: -.01em; line-height: 1.65; }
 #goal-meter, #goal-meter * { font-family: "OpenAI Sans", Arial, sans-serif !important; }
 .nano-pay-example-wall { border: 1px solid var(--line); margin: 1rem 0 1.75rem; padding: 1rem; }
 a { color: inherit; text-decoration: none; }
@@ -46,7 +46,7 @@ img { display: block; max-width: 100%; }
 #nav p { color: var(--ink); font-weight: 500; margin: 0 0 1.25rem; }
 #nav a { display: block; margin-bottom: .8rem; }
 #nav a:hover { color: var(--ink); }
-#article-body { font-size: 18px; line-height: 1.7; min-width: 0; }
+#article-body { font-size: 19px; line-height: 1.7; min-width: 0; }
 #article-body > :first-child { margin-top: 0; }
 #article-body p, #article-body ul, #article-body ol, #article-body blockquote { margin: 0 0 1.75rem; }
 #article-body h2, #article-body h3 { font-weight: 500; letter-spacing: -.035em; line-height: 1.15; margin: 4rem 0 1.25rem; }
@@ -65,7 +65,7 @@ img { display: block; max-width: 100%; }
 #article-body blockquote { border-left: 2px solid var(--ink); font-size: 21px; letter-spacing: -.02em; padding-left: 1.5rem; }
 #article-body hr { background: var(--line); border: 0; height: 1px; margin: 3.5rem 0; }
 #article-body code { background: #f3f3f3; border-radius: 3px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; padding: .15em .35em; }
-#article-body pre { background: #171717; color: #f7f7f7; font-size: 14px; margin: 2rem 0; overflow-x: auto; padding: 1.25rem; }
+#article-body pre { background: #171717; color: #f7f7f7; font-size: 16px; margin: 2rem 0; overflow-x: auto; padding: 1.25rem; }
 #article-body pre code { background: transparent; padding: 0; }
 #article-body table { border-collapse: collapse; display: block; margin-bottom: 2rem; overflow-x: auto; width: 100%; }
 #article-body th, #article-body td { border: 1px solid var(--line); padding: .6rem .8rem; text-align: left; }
@@ -95,4 +95,4 @@ footer p { font-size: 13.2px; line-height: 1.45; margin: 0 auto .5rem; max-width
 footer p:last-child { margin-bottom: 0; }
 
 @media (max-width: 900px) { .site-header { grid-template-columns: 1fr auto; height: 72px; padding: 0 1.25rem; } .site-header nav { display: none; } .home { padding: 4rem 1.25rem 5rem; } .article-grid { gap: 3.5rem 1.25rem; } .article-lead { padding: 5rem 1.25rem 3.5rem; } .article-rule { margin: 0 1.25rem; } .article-layout { gap: 0; grid-template-columns: minmax(0, 700px); margin: 3rem auto 5rem; padding: 0 1.25rem; } #nav { display: none; } footer { margin: 0 1.25rem; } }
-@media (max-width: 640px) { body { font-size: 16px; } .article-grid { grid-template-columns: 1fr; } .listing-heading { margin-bottom: 2rem; } .topic-row { gap: 1.25rem; margin-bottom: 2rem; } .card-image { aspect-ratio: 1.25; } .article-meta { font-size: 15px; margin-bottom: 2rem; } .article-summary { font-size: 20px; } #article-body { font-size: 17px; } }
+@media (max-width: 640px) { body { font-size: 17px; } .article-grid { grid-template-columns: 1fr; } .listing-heading { margin-bottom: 2rem; } .topic-row { gap: 1.25rem; margin-bottom: 2rem; } .card-image { aspect-ratio: 1.25; } .article-meta { font-size: 15px; margin-bottom: 2rem; } .article-summary { font-size: 20px; } #article-body { font-size: 18px; } }
