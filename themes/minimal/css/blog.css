@@ -3,6 +3,7 @@
 
 :root { --ink: #0d0d0d; --muted: #6d6d6d; --line: #e7e7e7; --page: #fff; }
 * { box-sizing: border-box; }
+html, body { touch-action: manipulation; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--page); color: var(--ink); font-family: "OpenAI Sans", Arial, sans-serif; font-size: 18px; font-weight: 400; letter-spacing: -.01em; line-height: 1.65; }
 #goal-meter, #goal-meter * { font-family: "OpenAI Sans", Arial, sans-serif !important; }
